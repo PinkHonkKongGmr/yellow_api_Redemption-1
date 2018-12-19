@@ -10,22 +10,23 @@ window.onload = function() {
   var adress = document.querySelector('.adress');
   var x = document.querySelector('.x');
   var target = document.querySelector('.target');
-
-
+  var temp_name = document.querySelector('.temp_name');
 
   name.oninput = function() {
 
     pass0.classList.remove('hide');
     fail0.classList.add('hide');
+    temp_name.innerHTML='ready';
     if (name.value.match(reg)) {
       pass0.classList.add('hide');
       fail0.classList.remove('hide');
-
+temp_name.innerHTML='NOTready';
     }
 
     if (name.value == '') {
       pass0.classList.add('hide');
       fail0.classList.add('hide');
+      temp_name.innerHTML='NOTready';
     }
   }
 

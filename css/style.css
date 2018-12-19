@@ -12,6 +12,89 @@
 
 body {
   background-image: linear-gradient(#0f49a7 0%, #2aa8e8 100%);
+  padding: 0;
+  margin: 0;
+}
+
+.temp
+{position: absolute;opacity: 0;}
+
+
+
+.popup
+{width: 100%;
+position: absolute;
+background: inherit;
+top:0;
+opacity: 0;
+text-align: center;
+z-index: -100;
+color: white;
+}
+
+.popup_circle
+{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #138808;
+  margin: auto;
+  margin-top: 185px;
+}
+
+.cross
+{
+  position: absolute;
+  top:20px;
+  right: 50px;
+  padding-top: 10px;
+}
+
+.cross1, .cross2
+{
+  width:31px;
+  height: 2px;
+  background: grey;
+  position: absolute;
+}
+
+.cross1
+{
+  transform: rotate(45deg);
+}
+
+.cross2
+{
+  transform: rotate(-45deg);
+}
+.popup a
+{text-decoration:none;
+color:inherit;
+font-size: 30px;
+font-weight: 400px;
+text-transform: uppercase;}
+
+.popup p
+{
+  opacity: 0.7;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+.popup_on {
+  animation: pulse 2s;
+  z-index: 100;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .manInHelmet_icon {
@@ -27,17 +110,16 @@ body {
   text-align: center;
 }
 
-.form_wrapper h2 {
+.form_wrapper h2, .popup h2 {
   color: #ffffff;
   font-family: 'Roboto Condensed', sans-serif;
-  height: 70px;
   font-size: 60px;
   font-weight: 300;
   line-height: 62px;
   margin-bottom: 5px;
 }
 
-.form_wrapper h3 {
+.form_wrapper h3 , .popup h3{
   color: #ffffff;
   font-family: "Roboto Condensed";
   font-size: 22px;
