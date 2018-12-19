@@ -30,6 +30,7 @@ opacity: 0;
 text-align: center;
 z-index: -100;
 color: white;
+font-family: 'Roboto Condensed', sans-serif;
 }
 
 .popup_circle
@@ -196,6 +197,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .unique_item_wrapper {
   display: flex;
   padding: 0;
+  margin-bottom: 152px;
 }
 
 .unique_service h2 {
