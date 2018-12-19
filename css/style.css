@@ -11,7 +11,7 @@
 }
 
 body {
-  background-image: linear-gradient(106deg, #0f49a7 0%, #2aa8e8 100%);
+  background-image: linear-gradient(#0f49a7 0%, #2aa8e8 100%);
 }
 
 .manInHelmet_icon {
@@ -58,6 +58,7 @@ body {
   justify-content: space-between;
   margin: auto;
   margin-bottom: 36px;
+  position: relative;
 }
 
 .inputs input {
@@ -181,11 +182,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .mark img {
   position: absolute;
-  left: -258px;
-  top: -65px;
+  left: 6px;
+  top: 2px;
 }
 
-.inputs input, ::-webkit-input-placeholder {
+.target {
+  position: absolute;
+  top: 5px;
+  left: 49px;
+}
+
+.target, .inputs input, ::-webkit-input-placeholder {
   opacity: 0.5;
   color: #ffffff;
   font-family: "Roboto Condensed";
@@ -242,8 +249,17 @@ input, .adress {
 
 .adress_wrapper i {
   position: absolute;
-  left: 10px;
-  top: 10px;
+}
+
+.radius {
+  top: 17px;
+  left: 20px;
+}
+
+.center {
+  top: 20px;
+  left: 31px;
+  opacity: 0.8;
 }
 
 .adress_wrapper::before {
@@ -254,6 +270,36 @@ input, .adress {
   top: 39px;
   left: 50px;
   opacity: 0.6;
+}
+
+.validator {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.pass {
+  background: green;
+}
+
+.fail {
+  background: red;
+}
+
+.validator:nth-child(odd) {
+  left: 220px;
+}
+
+.validator:nth-child(even) {
+  left: 465px;
+}
+
+.x {
+  position: absolute;
+  right: 25px;
+  top: 11px;
 }
 
 @media screen and (max-width: 768px) {
@@ -281,8 +327,15 @@ input, .adress {
     box-sizing: border-box;
     height: 60px;
   }
+  .form_wrapper {
+    flex-wrap: wrap;
+  }
+  .adress_wrapper {
+    width: 100%;
+  }
   .form_wrapper form .adress {
     width: 100%;
+    margin-bottom: 23px;
   }
   .unique_service h2::before {
     width: 152px;
@@ -296,4 +349,31 @@ input, .adress {
   .unique_item {
     width: 274px;
   }
+}
+
+@media screen and (max-width: 425px) {
+  .form_wrapper, .unique_service {
+    width: 85%;
+  }
+  .inputs {
+    width: 100%;
+  }
+  .inputs input {
+    width: 100%;
+  }
+  .adress_wrapper {
+    width: 100%;
+  }
+  .form_wrapper form .adress {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 325px) {
+
+  .form_wrapper h2{
+ height: auto;
+
+  }
+
 }

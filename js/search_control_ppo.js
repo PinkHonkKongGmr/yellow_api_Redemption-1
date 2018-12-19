@@ -1,7 +1,7 @@
 function ready(map)
 {
   $('.adress_wrapper').click(function () {
-    $('#map').toggleClass("hide");
+    $('#map').toggleClass();
     map.container.fitToViewport();
   })
 }
@@ -28,6 +28,8 @@ ready(myMap);
    searchControl.events.add('load', function(event) {
      if (!event.get('skip') && searchControl.getResultsCount()) {
        $('.adress').val(searchControl.getRequestString());
+       $('.x').removeClass('hide');
+       $('.target').removeClass('hide');
      }
    });
 

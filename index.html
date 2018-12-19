@@ -31,11 +31,23 @@
     <form class="" action="index.html" method="post">
 
       <div class="inputs">
-        <input type="text" name="" value="" placeholder="Ваше имя">
+
+        <div class="pass validator hide"><img src="img/galka.png" alt=""></div>
+        <div class="pass validator hide"><img src="img/galka.png" alt=""></div>
+        <div class="fail validator hide">!</div>
+        <div class="fail validator hide">!</div>
+        <input type="text" name="" value="" placeholder="Ваше имя" class="name">
         <input type="text" name="" value="" placeholder="Телефон" class="phone">
         <div class="adress_wrapper" id='adress_wrapper'>
-          <i><img src="img/shoot.png" alt=""></i>
+          <i class="radius"><img src="img/shootRadius.png" alt=""></i>
+          <i class="center"><img src="img/shootCenter.png" alt=""></i>
+          <div class="x hide" style="opacity:0.8;color:white;">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
           <input type="text" name="" value="" class="adress" placeholder="Расположение объекта">
+          <div class="target hide">
+            Расположение объекта
+          </div>
         </div>
       </div>
       <div id="map" class="hide" style="width: 100%; height: 400px;margin-bottom:26px"></div>
@@ -82,5 +94,7 @@
 
   <script src="js\jquery.maskedinput.min.js"></script>
   <script src="js\mask.js"></script>
+<script src="js\validation.js"></script>
+<script src="https://use.fontawesome.com/550105d68c.js"></script>
 
 </body>
