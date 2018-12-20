@@ -35,7 +35,7 @@ function popupActive() {
         }, 2000
       )
     }
-     if (temp_name.innerHTML=="NOTready"||temp_name.innerHTML==""||name.value.substring(0,1)==" ") {
+     if (temp_name.innerHTML=="NOTready"||name.value==""||name.value.substring(0,1)==" ") {
         validators[0].classList.add('hide');
         validators[2].classList.remove('hide');
      }
