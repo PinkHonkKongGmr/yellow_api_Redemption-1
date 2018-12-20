@@ -15,6 +15,7 @@ function popupActive() {
   var name = document.querySelector('.name');
   var target=document.querySelector('.target');
   var x = document.querySelector('.x');
+  var temp_name = document.querySelector('.temp_name');
 
   var scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -34,12 +35,17 @@ function popupActive() {
         }, 2000
       )
     }
-    else {
-      for (let val of validators) {
-        val.classList.remove('hide');
-      }
+     if (temp_name.innerHTML=="NOTready"||temp_name.innerHTML==""||name.value.substring(0,1)==" ") {
+        validators[0].classList.add('hide');
+        validators[2].classList.remove('hide');
+     }
+
+     if (phone.value=="") {
+        validators[1].classList.add('hide');
+        validators[3].classList.remove('hide');
+     }
     }
-  }
+
 
   close.onclick = function() {
 
@@ -51,6 +57,9 @@ function popupActive() {
     phone.value='';
     target.classList.add('hide');
     x.classList.add('hide');
+    for (val of validators) {
+      val.classList.add('hide');
+    }
 
   }
 

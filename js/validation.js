@@ -17,6 +17,7 @@ window.onload = function() {
     pass0.classList.remove('hide');
     fail0.classList.add('hide');
     temp_name.innerHTML = 'ready';
+    console.log(temp_name.innerHTML);
     if (name.value.match(reg)) {
       pass0.classList.add('hide');
       fail0.classList.remove('hide');
