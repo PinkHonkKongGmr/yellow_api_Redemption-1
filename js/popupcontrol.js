@@ -16,6 +16,7 @@ function popupActive() {
   var target=document.querySelector('.target');
   var x = document.querySelector('.x');
   var temp_name = document.querySelector('.temp_name');
+  var map = document.getElementById('map');
 
   var scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -31,8 +32,9 @@ function popupActive() {
       setTimeout(
         function() {
           popup.style.opacity = '1';
-          form_wrapper.classList.add('hide');
-        }, 2000
+          form_wrapper.classList.add('getSmall');
+          map.classList.add('getSmall');
+        }, 1000
       )
     }
      if (temp_name.innerHTML=="NOTready"||name.value==""||name.value.substring(0,1)==" ") {
@@ -56,12 +58,13 @@ function popupActive() {
 
     popup.classList.remove('popup_on');
     popup.style.opacity = '0';
-    form_wrapper.classList.remove('hide');
+    form_wrapper.classList.remove('getSmall');
     name.value='';
     adress.value ='';
     phone.value='';
     target.classList.add('hide');
     x.classList.add('hide');
+    map.classList.remove('getSmall');
     for (val of validators) {
       val.classList.add('hide');
     }
