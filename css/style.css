@@ -49,6 +49,8 @@ font-family: 'Roboto Condensed', sans-serif;
   top:20px;
   right: 50px;
   padding-top: 10px;
+  width:20px;
+  height:20px;
 }
 
 .cross1, .cross2
@@ -380,6 +382,11 @@ input, .adress {
   left: 465px;
 }
 
+.inputs .ad_val
+{
+  left:705px;
+}
+
 .x {
   position: absolute;
   right: 25px;
@@ -433,6 +440,13 @@ input, .adress {
   .unique_item {
     width: 274px;
   }
+
+  .inputs .ad_val
+  {
+    top:80px;
+    left:505px;
+  }
+
 }
 
 @media screen and (max-width: 425px) {
@@ -451,6 +465,11 @@ input, .adress {
   .form_wrapper form .adress {
     width: 100%;
   }
+  .inputs .ad_val
+  {
+    top:140px;
+    left:260px;
+  }
 }
 
 @media screen and (max-width: 325px) {
@@ -458,6 +477,12 @@ input, .adress {
   .form_wrapper h2{
  height: auto;
 
+  }
+
+  .inputs .ad_val
+  {
+    top:140px;
+    left:240px;
   }
 
 }

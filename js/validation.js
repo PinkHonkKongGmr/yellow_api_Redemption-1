@@ -12,6 +12,7 @@ window.onload = function() {
   var target = document.querySelector('.target');
   var temp_name = document.querySelector('.temp_name');
   var phone = document.querySelector('.phone');
+  var ad_val = document.querySelectorAll('.ad_val');
 
   name.oninput = function() {
     pass0.classList.remove('hide');
@@ -44,6 +45,8 @@ window.onload = function() {
     adress.value = '';
     x.classList.add('hide');
     target.classList.add('hide');
+    ad_val[0].classList.add('hide');
+    ad_val[1].classList.remove('hide');
   }
 
   phone.onclick = function() {

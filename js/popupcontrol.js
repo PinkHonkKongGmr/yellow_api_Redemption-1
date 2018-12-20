@@ -44,6 +44,11 @@ function popupActive() {
         validators[1].classList.add('hide');
         validators[3].classList.remove('hide');
      }
+
+     if (adress.value=="") {
+        validators[4].classList.add('hide');
+        validators[5].classList.remove('hide');
+     }
     }
 
 

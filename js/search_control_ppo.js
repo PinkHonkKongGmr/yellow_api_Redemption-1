@@ -30,6 +30,8 @@ ready(myMap);
        $('.adress').val(searchControl.getRequestString());
        $('.x').removeClass('hide');
        $('.target').removeClass('hide');
+       $('.ad_val:first').removeClass('hide');
+       $('.ad_val:last').addClass('hide');
      }
    });
 
