@@ -27,7 +27,7 @@ function popupActive() {
   popup.style.height = scrollHeight-200 + 'px';
 
   order.onclick = function() {
-    if (temp_name.innerHTML == 'ready'&&adress.value!=""&&phone.value!='') {
+    if (temp_name.innerHTML == 'ready'&&adress.value!=""&&phone.value!=''&&name.value!='') {
       popup.classList.add('popup_on');
       setTimeout(
         function() {
